@@ -28,18 +28,6 @@ class MyStarBucks extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: PreferredSize(
-        preferredSize: Size.fromHeight(250),
-        child: MainAppbar(),
-      ),
-      body: Column(
-        children: [
-          Expanded(
-            child: MainContent(),
-          ),
-        ],
-      ),
-    );
+    return Scaffold();
   }
 }
