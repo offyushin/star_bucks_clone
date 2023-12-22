@@ -1,6 +1,7 @@
+import 'package:clone_starbucks_app/maincontent.dart';
 import 'package:flutter/material.dart';
 
-import 'listview.dart';
+import 'mainappbar.dart';
 
 void main() {
   runApp(const MyApp());
@@ -27,26 +28,17 @@ class MyStarBucks extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        body: Column(
-          children: [
-            Container(
-              width: double.infinity,
-              height: 180,
-              child: Image(
-                image: AssetImage('assets/05_01_card.png'),
-              ),
-            ),
-            Column(
-              children: [
-                Expanded(
-                  child: MainListView(),
-                ),
-              ],
-            ),
-          ],
-        ),
+    return Scaffold(
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(250),
+        child: MainAppbar(),
+      ),
+      body: Column(
+        children: [
+          Expanded(
+            child: MainContent(),
+          ),
+        ],
       ),
     );
   }
